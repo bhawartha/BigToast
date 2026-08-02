@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #131317;
+  --surface-color: #17171d;
+  --charcoal-card: #252529;
+  --charcoal-border: #3f3f46;
+  --paragraph-color: #a1a1aa;
+  --white-color: #f4f4f5;
+  --border-color: rgba(255, 255, 255, 0.14);
+}
+
+html {
+  scroll-behavior: initial;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  font-family: var(--font-figtree), sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Touch Action & Tap Optimization */
+a, button, nav {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Lenis Smooth Scroll CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: cubic-bezier(0.1, 1, 0.1, 1);
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Enhanced Ambient Glowing Charcoal & Silver Orbs */
+.fixed-bg-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 50% -10%, rgba(180, 180, 200, 0.28) 0%, transparent 60%),
+    radial-gradient(circle at 15% 40%, rgba(100, 100, 115, 0.35) 0%, transparent 50%),
+    radial-gradient(circle at 85% 70%, rgba(130, 130, 145, 0.28) 0%, transparent 50%),
+    radial-gradient(circle at 50% 100%, rgba(90, 90, 105, 0.2) 0%, transparent 50%);
+}
+
+/* Rich Charcoal Glassmorphism Card Utilities */
+.glass-card {
+  background: rgba(38, 38, 44, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(52, 52, 60, 0.95);
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.65);
+}
+
+.glass-card-charcoal {
+  background: linear-gradient(135deg, rgba(52, 52, 60, 0.95) 0%, rgba(35, 35, 42, 0.9) 100%);
+  backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Dual Vertical Text Slide Button Effect */
+.btn-text-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+
+.btn-text-relative {
+  display: block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-text-absolute {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .btn-text-relative {
+  transform: translateY(-100%);
+}
+
+.group:hover .btn-text-absolute {
+  transform: translateY(-100%);
+}
+
+/* Arrow Slide Hover Effect */
+.arrow-icon-relative {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arrow-icon-absolute {
+  position: absolute;
+  transform: translate(-180%, 180%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .arrow-icon-relative {
+  transform: translate(180%, -180%);
+}
+
+.group:hover .arrow-icon-absolute {
+  transform: translate(0%, 0%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #131317;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
