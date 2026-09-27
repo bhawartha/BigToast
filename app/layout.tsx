@@ -20,16 +20,18 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "BigToast - Modern Creative Design & Strategy Studio",
+  title: "Big Toast Company — Storytelling & Distribution for Founders and Brands",
   description:
-    "BigToast is a modern creative design studio focused on intentional design and strategic messaging, helping brands connect, stand out, and grow with clarity.",
+    "Big Toast Company helps founders and brands turn ideas, expertise and experiences into stories, content and distribution systems that earn attention, build authority and create opportunities. Based in Delhi, India. Working globally.",
   keywords: [
-    "BigToast",
-    "Creative Design Studio",
-    "Strategic Messaging",
-    "UI UX Design",
-    "Next.js Development",
-    "AI Integration",
+    "storytelling company India",
+    "founder content strategy",
+    "podcast production India",
+    "AI content",
+    "brand video",
+    "content distribution system",
+    "personal branding founders",
+    "Big Toast Company",
   ],
   icons: {
     icon: "/logo.png",
@@ -37,11 +39,11 @@ export const metadata: Metadata = {
     apple: "/logo.png",
   },
   openGraph: {
-    title: "BigToast - Modern Creative Design & Strategy Studio",
+    title: "Big Toast Company — Storytelling & Distribution for Founders and Brands",
     description:
-      "Intentional design & strategic messaging to help startups and enterprises scale with creativity.",
-    url: "https://bigtoast.studio",
-    siteName: "BigToast",
+      "Big Toast Company helps founders and brands turn ideas, expertise and experiences into stories, content and distribution systems that earn attention, build authority and create opportunities. Based in Delhi, India. Working globally.",
+    url: "https://bigtoastcompany.com",
+    siteName: "Big Toast Company",
     type: "website",
   },
 };

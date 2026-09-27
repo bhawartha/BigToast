@@ -45,10 +45,10 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800/80 border border-zinc-600 text-xs md:text-sm font-medium tracking-wide text-zinc-200 shadow-md"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800/80 border border-zinc-600 text-xs md:text-sm font-semibold tracking-wider uppercase text-zinc-200 shadow-md"
               >
-                <span className="w-2 h-2 rounded-full bg-zinc-300 animate-pulse" />
-                Intelligence. Creativity. Impact.
+                <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
+                STORYTELLING × DISTRIBUTION
               </motion.div>
 
               {/* Title */}
@@ -58,9 +58,9 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                 className="text-4xl md:text-6xl lg:text-7xl font-sans font-normal leading-[1.08] tracking-tight text-white"
               >
-                Transform the Way Your{" "}
+                Turn what you know, build and believe into{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
-                  Story Looks
+                  stories people remember.
                 </span>
               </motion.h1>
 
@@ -71,28 +71,31 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 className="text-lg md:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl"
               >
-                We craft cinematic reels, long-form videos, podcast edits, and AI-powered video content — paired with stunning websites, web apps, and mobile apps — so your brand stands out and converts everywhere.
+                Big Toast Company helps founders and brands turn ideas, expertise and experiences into stories, content and distribution systems that earn attention, build authority and create opportunities.
               </motion.p>
 
-              {/* Action Buttons */}
+              {/* Action Buttons & Tagline */}
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-                className="flex flex-wrap items-center gap-6 pt-2"
+                className="flex flex-col items-start gap-4 pt-2"
               >
-                <PrimaryButton text="Get Started" href="/contact-us" />
+                <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                  <PrimaryButton text="Start a Conversation" href="/contact-us" showArrow={true} />
 
-                {/* Showreel Modal Trigger */}
-                <button
-                  onClick={() => setShowreelOpen(true)}
-                  className="flex items-center gap-3 px-6 py-3.5 rounded-full bg-zinc-800/80 hover:bg-zinc-700 border border-zinc-600 text-white font-medium text-[16px] transition-all duration-300 group shadow-md"
-                >
-                  <div className="w-7 h-7 rounded-full bg-zinc-700 border border-zinc-500 flex items-center justify-center text-zinc-200 group-hover:scale-110 group-hover:bg-zinc-600 group-hover:text-white transition-all">
-                    <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
-                  </div>
-                  <span>View Showreel</span>
-                </button>
+                  <a
+                    href="#how-we-work"
+                    className="flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-zinc-800/80 hover:bg-zinc-700 border border-zinc-600 text-white font-medium text-[15px] transition-all duration-300 group shadow-md"
+                  >
+                    <span>See How We Work</span>
+                    <span className="text-zinc-400 group-hover:translate-y-0.5 transition-transform">↓</span>
+                  </a>
+                </div>
+
+                <span className="text-xs text-zinc-400 font-medium tracking-wide pl-1">
+                  ✦ Building Stories. Creating Distribution.
+                </span>
               </motion.div>
             </div>
 

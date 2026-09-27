@@ -3,27 +3,38 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import PrimaryButton from "./PrimaryButton";
 
 const FAQS = [
   {
-    question: "What types of video editing does BigToast specialize in?",
-    answer: "BigToast specializes in short-form reels & TikToks, long-form YouTube and brand films, podcast audio and video editing, and AI-generated video content. We also build websites, web apps, and mobile apps for creators and businesses.",
+    question: "Do you work as a video editing agency?",
+    answer:
+      "No. Editing is one of our capabilities. Our work starts much earlier — with positioning, ideas, stories and strategy — and extends into production and distribution.",
   },
   {
-    question: "How quickly can you deliver edited reels or short-form content?",
-    answer: "Standard reels and short-form content are typically delivered within 2 - 4 business days. Turnaround can be expedited for urgent projects. Long-form videos and brand films take 1 - 2 weeks depending on complexity.",
+    question: "Who do you work with?",
+    answer:
+      "Founders, coaches, consultants, brands, podcasts and companies who have something worth saying and want a system to say it consistently.",
   },
   {
-    question: "What AI video tools do you use for content generation?",
-    answer: "We use industry-leading tools including Runway ML for video generation, HeyGen for AI avatars and talking head videos, ElevenLabs for voiceover synthesis, Kling AI, and Pika Labs for text-to-video workflows — delivering AI content at speed and scale.",
+    question: "Do you use AI?",
+    answer:
+      "Yes — where it genuinely improves research, ideation, production, repurposing or scale. AI is a tool inside the system. Not the reason the system exists.",
   },
   {
-    question: "Do you provide raw footage editing or do we need a full production package?",
-    answer: "We work with your raw footage and handle everything from there. You simply deliver the footage (or recordings), and we take care of the full post-production — editing, color grading, sound design, graphics, and final export.",
+    question: "Where are you based?",
+    answer:
+      "Delhi, India. We work with clients remotely across India and internationally.",
   },
   {
-    question: "What is your pricing model for video editing and web development?",
-    answer: "We offer flexible pricing: per-video packages for content creators, monthly retainer packages for brands needing ongoing content, and project-based pricing for websites and apps. Contact us for a custom quote within 24 hours.",
+    question: "Do you guarantee viral content?",
+    answer:
+      "No. Nobody honestly can. We control the strategy, story, creative, production, distribution and learning process. The audience decides what travels.",
+  },
+  {
+    question: "How do we get started?",
+    answer:
+      "Hit the button below, tell us about your project and we'll set up a call to see if we're the right fit.",
   },
 ];
 
@@ -45,7 +56,7 @@ export default function FAQSection() {
             viewport={{ once: true }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-700 text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-4"
           >
-            Got Questions?
+            Clarity & Transparency
           </motion.div>
 
           <motion.h2
@@ -56,7 +67,9 @@ export default function FAQSection() {
             className="text-3xl md:text-5xl font-sans font-normal leading-tight text-white"
           >
             Frequently Asked{" "}
-            <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">Questions</span>
+            <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
+              Questions
+            </span>
           </motion.h2>
         </div>
 
@@ -70,18 +83,18 @@ export default function FAQSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="glass-card rounded-2xl overflow-hidden border border-zinc-800"
+                transition={{ duration: 0.4, delay: idx * 0.06 }}
+                className="glass-card rounded-2xl overflow-hidden border border-zinc-800 hover:border-zinc-700 transition-colors"
               >
                 <button
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 transition-colors hover:bg-zinc-800/50 touch-manipulation"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 transition-colors hover:bg-zinc-800/40 touch-manipulation cursor-pointer"
                 >
-                  <span className="text-lg md:text-xl font-bold text-white font-sans">
+                  <span className="text-base md:text-xl font-bold text-white font-sans">
                     {faq.question}
                   </span>
                   <div
-                    className={`w-8 h-8 rounded-full border flex items-center justify-center transition-all ${
+                    className={`w-8 h-8 rounded-full border flex items-center justify-center shrink-0 transition-all ${
                       isOpen
                         ? "bg-zinc-800 border-zinc-500 text-white rotate-180"
                         : "border-zinc-700 text-zinc-400"
@@ -97,9 +110,9 @@ export default function FAQSection() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                      transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
                     >
-                      <div className="px-6 pb-6 pt-2 text-zinc-400 text-sm md:text-base leading-relaxed border-t border-zinc-800">
+                      <div className="px-6 pb-6 pt-2 text-zinc-300 text-sm md:text-base leading-relaxed border-t border-zinc-800/80">
                         {faq.answer}
                       </div>
                     </motion.div>
@@ -108,6 +121,10 @@ export default function FAQSection() {
               </motion.div>
             );
           })}
+        </div>
+
+        <div className="text-center mt-12">
+          <PrimaryButton text="Have a Question? Start a Conversation" href="/contact-us" showArrow={true} />
         </div>
       </div>
     </section>
