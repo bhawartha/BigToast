@@ -3,167 +3,262 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Award, Sparkles, Target, Compass, Linkedin, Twitter, Mail } from "lucide-react";
+import { ArrowUpRight, Award, Sparkles, Target, Compass, Linkedin, Twitter, Mail, ChevronDown } from "lucide-react";
 import PrimaryButton from "@/components/PrimaryButton";
 import CTABanner from "@/components/CTABanner";
 
 const FOUNDER_MILESTONES = [
   {
-    year: "2018",
-    title: "Founded First Design Collective",
-    description: "Pioneered human-centric UI/UX systems for high-growth tech startups in San Francisco.",
+    year: "Editor",
+    title: "Early Days & Online Learning",
+    description: "Started as a video editor while still in school, learning fundamentals, cuts, and pacing through online communities and basic tools.",
   },
   {
-    year: "2021",
-    title: "Scaled 100+ Enterprise Products",
-    description: "Led digital transformation and brand repositioning for Fortune 500 partners and AI startups.",
+    year: "Storyteller",
+    title: "Creators & Podcast Production",
+    description: "Refined craft working with creators, podcasts, and personal brands, turning raw footage and conversations into high-retention stories.",
   },
   {
-    year: "2024",
-    title: "Launched BigToast Studio",
-    description: "Unified brand architecture, full-stack Next.js engineering, and predictive AI into a premier design powerhouse.",
+    year: "Strategist",
+    title: "Agencies & Global Clients",
+    description: "Expanded into content production and creative strategy for agencies, businesses, international clients, and AI-assisted workflows.",
   },
   {
-    year: "2026",
-    title: "Global AI & Design Leadership",
-    description: "Driving the next wave of generative AI user experiences and intelligent brand systems worldwide.",
+    year: "Founder",
+    title: "Founding Big Toast Company",
+    description: "Established Big Toast Company as a dedicated storytelling studio, uniting cinematic editing, content strategy, and creative direction.",
   },
 ];
 
 const FOUNDER_PRINCIPLES = [
   {
-    title: "Intentionality Over Noise",
-    description: "Every pixel, layout choice, and micro-interaction must serve a clear business purpose—never filler, always impact.",
+    title: "Story Over Spectacle",
+    description: "Every cut, transition, and sound cue must serve the emotional core of the narrative. True audience connection comes from meaning, not filler effects.",
   },
   {
-    title: "Human Touch Meets AI Intelligence",
-    description: "Technology should amplify human intuition and storytelling, creating deeply emotional connections with users.",
+    title: "Craft Grounded in Curiosity",
+    description: "From learning on basic tools to adopting modern AI-assisted workflows, staying curious and adaptable is what keeps creative work fresh and effective.",
   },
   {
-    title: "Velocity Through Clarity",
-    description: "Speed without strategy leads to debt. Clear alignment upfront enables frictionless execution and market dominance.",
+    title: "Purpose-Driven Content",
+    description: "We collaborate closely with founders and brands to understand their real voice, crafting videos and podcasts that build lasting resonance with their audience.",
   },
+];
+
+const FOUNDER_METRICS = [
+  { value: "Founder", label: "Big Toast Company", sublabel: "Story-first creative studio" },
+  { value: "Video", label: "Editing & Pacing", sublabel: "Cinematic post-production" },
+  { value: "Content", label: "Podcasts & Brands", sublabel: "Creators, founders & agencies" },
+  { value: "Creative", label: "Strategy & AI", sublabel: "Modern narrative workflows" },
 ];
 
 export default function AboutFounderPage() {
   return (
-    <div className="pt-36 pb-20">
-      {/* Hero Banner */}
-      <section className="max-w-7xl mx-auto px-6 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-          {/* Left Column - Founder Bio */}
-          <div className="lg:col-span-7 flex flex-col items-start gap-8">
+    <div className="pb-20">
+      {/* Hero Banner - 1 Screen Executive Composition */}
+      <section className="relative min-h-[calc(100vh/0.9)] lg:h-[calc(100vh/0.9)] flex flex-col justify-between pt-24 pb-4 lg:pt-20 lg:pb-5 w-full overflow-hidden">
+        {/* Subtle Ambient Radial Glows */}
+        <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-sky-500/10 blur-[130px] pointer-events-none" />
+        <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[480px] h-[480px] rounded-full bg-cyan-500/10 blur-[110px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-center relative z-10">
+          {/* Main Content Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-14 items-center w-full my-auto py-2">
+            {/* Left Column - Founder Bio */}
+            <div className="lg:col-span-7 flex flex-col items-start gap-4 lg:gap-5">
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-700/80 text-xs font-semibold uppercase tracking-wider text-zinc-300 shadow-sm"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+                <span>Leadership &amp; Vision</span>
+                <span className="w-1 h-1 rounded-full bg-zinc-600" />
+                <span className="text-zinc-400 normal-case font-normal text-[11px]">Founder Profile</span>
+              </motion.div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-sans font-normal leading-[1.08] text-white tracking-tight"
+              >
+                Meet{" "}
+                <span className="font-serif italic bg-gradient-to-r from-zinc-200 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
+                  Himanshu Singh
+                </span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="text-zinc-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl"
+              >
+                Founder &amp; Creative Director at Big Toast Company. Started editing in school and learning through online communities, evolving through creator content, podcasts, agencies, and AI-assisted workflows into a story-driven creative director.
+              </motion.p>
+
+              {/* Capability Pills */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex flex-wrap items-center gap-2 pt-0.5"
+              >
+                <span className="px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-xs text-zinc-300 flex items-center gap-1.5">
+                  <Target className="w-3 h-3 text-sky-400" /> 01. Story-Driven Video Editing
+                </span>
+                <span className="px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-xs text-zinc-300 flex items-center gap-1.5">
+                  <Compass className="w-3 h-3 text-cyan-400" /> 02. Podcasts &amp; Content Production
+                </span>
+                <span className="px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-xs text-zinc-300 flex items-center gap-1.5">
+                  <Award className="w-3 h-3 text-sky-300" /> 03. Creative Strategy &amp; Direction
+                </span>
+              </motion.div>
+
+              {/* Action Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.25 }}
+                className="flex flex-wrap items-center gap-3 pt-2"
+              >
+                <PrimaryButton text="Connect With Himanshu" href="/contact-us" />
+
+                <div className="flex items-center gap-2">
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Himanshu LinkedIn"
+                    title="LinkedIn"
+                    className="w-11 h-11 rounded-full bg-zinc-900/90 border border-zinc-700/80 flex items-center justify-center text-zinc-300 hover:text-white hover:border-sky-500/60 hover:bg-zinc-800 transition-all hover:scale-105"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Himanshu Twitter"
+                    title="Twitter"
+                    className="w-11 h-11 rounded-full bg-zinc-900/90 border border-zinc-700/80 flex items-center justify-center text-zinc-300 hover:text-white hover:border-sky-500/60 hover:bg-zinc-800 transition-all hover:scale-105"
+                  >
+                    <Twitter className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="mailto:contact@bigtoast.studio"
+                    aria-label="Email Himanshu"
+                    title="Direct Email"
+                    className="w-11 h-11 rounded-full bg-zinc-900/90 border border-zinc-700/80 flex items-center justify-center text-zinc-300 hover:text-white hover:border-sky-500/60 hover:bg-zinc-800 transition-all hover:scale-105"
+                  >
+                    <Mail className="w-4 h-4" />
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Column - Simple Clean Photo and Frame */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-700 text-xs font-semibold uppercase tracking-wider text-zinc-300"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-5 flex justify-center lg:justify-end items-center relative"
             >
-              <Sparkles className="w-3.5 h-3.5 text-sky-400" />
-              Leadership & Vision
-            </motion.div>
+              {/* Ambient Glow */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-sky-500/15 via-cyan-400/10 to-transparent rounded-[36px] blur-3xl pointer-events-none" />
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-sans font-normal leading-[1.08] text-white"
-            >
-              Meet <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">Marcus Leclerc</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-zinc-300 text-lg md:text-xl leading-relaxed max-w-2xl"
-            >
-              Founder & CEO of BigToast. Marcus is a visionary strategist, software architect, and creative director with over 12 years of experience building category-defining digital products.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex items-center gap-4 pt-2"
-            >
-              <PrimaryButton text="Connect With Marcus" href="/contact-us" />
-              
-              <div className="flex items-center gap-2">
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="w-11 h-11 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-500 transition-all"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter"
-                  className="w-11 h-11 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-500 transition-all"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
+              {/* Simple Elegant Frame */}
+              <div className="relative rounded-3xl p-2 sm:p-2.5 bg-zinc-900/70 backdrop-blur-xl border border-zinc-700/60 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
+                <div className="relative w-[280px] sm:w-[320px] md:w-[340px] lg:w-[350px] xl:w-[380px] aspect-[4/5] max-h-[52vh] lg:max-h-[480px] rounded-2xl overflow-hidden bg-zinc-900">
+                  <Image
+                    src="/founder.jpg"
+                    alt="Himanshu Singh - Founder & Creative Director"
+                    fill
+                    priority
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                  {/* Gentle Bottom Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent pointer-events-none" />
+                </div>
               </div>
             </motion.div>
           </div>
+        </div>
 
-          {/* Right Column - Portrait Visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 relative"
-          >
-            <div className="relative rounded-3xl overflow-hidden glass-card p-3 border border-zinc-800">
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-                <Image
-                  src="/founder.jpg"
-                  alt="Founder & CEO of BigToast"
-                  fill
-                  priority
-                  className="object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent" />
-              </div>
-
-            </div>
-          </motion.div>
+        {/* Subtle Scroll Hint */}
+        <div className="w-full flex items-center justify-center gap-2 text-zinc-500 text-xs py-1.5 pointer-events-none z-10">
+          <span>Scroll to explore story</span>
+          <ChevronDown className="w-3.5 h-3.5 animate-bounce text-sky-400" />
         </div>
       </section>
 
-      {/* Founder Story & Letter */}
-      <section className="py-24 bg-zinc-900/40 border-t border-b border-zinc-800/80 mb-28">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="text-xs font-semibold text-sky-400 uppercase tracking-widest block mb-2">
+      {/* Dedicated Executive Metrics Transition Section */}
+      <section className="relative py-12 bg-zinc-900/50 border-t border-b border-zinc-800/80 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-zinc-800/80">
+            {FOUNDER_METRICS.map((item, idx) => (
+              <div
+                key={idx}
+                className={`flex flex-col ${
+                  idx !== 0 ? "sm:pl-6 lg:pl-8" : ""
+                } ${idx > 1 ? "pt-4 sm:pt-0" : ""}`}
+              >
+                <span className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight bg-gradient-to-r from-white via-zinc-100 to-sky-300 bg-clip-text text-transparent">
+                  {item.value}
+                </span>
+                <span className="text-sm font-semibold text-zinc-200 mt-1">
+                  {item.label}
+                </span>
+                <span className="text-xs text-zinc-400 mt-0.5 hidden sm:block">
+                  {item.sublabel}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Story & Letter - 1 Screen Section Fit */}
+      <section className="relative min-h-[calc(100vh/0.9)] lg:h-[calc(100vh/0.9)] flex flex-col justify-center items-center py-8 lg:py-10 bg-zinc-900/40 border-t border-b border-zinc-800/80 w-full overflow-hidden">
+        {/* Subtle Ambient Background Light */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-sky-500/5 blur-[120px] pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto px-6 w-full relative z-10 flex flex-col justify-center my-auto">
+          {/* Header */}
+          <div className="text-center mb-4 sm:mb-6">
+            <span className="text-xs font-semibold text-sky-400 uppercase tracking-widest block mb-1.5">
               The Journey
             </span>
-            <h2 className="text-3xl md:text-5xl font-sans font-normal text-white">
-              A Letter From the <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">Founder</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-sans font-normal text-white">
+              A Letter From the{" "}
+              <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
+                Founder
+              </span>
             </h2>
           </div>
 
-          <div className="glass-card rounded-3xl p-8 md:p-14 border border-zinc-800 flex flex-col gap-6 text-zinc-300 text-base md:text-lg leading-relaxed">
+          {/* Letter Card */}
+          <div className="glass-card rounded-3xl p-6 sm:p-8 md:p-9 border border-zinc-800/90 flex flex-col gap-3.5 sm:gap-4 text-zinc-300 text-sm sm:text-base leading-relaxed shadow-2xl">
             <p>
-              When I started BigToast, the digital landscape was cluttered with cookie-cutter templates and uninspired visual noise. Companies were spending months building products that felt generic and disconnected from their core mission.
+              I started editing video while I was still in school, learning everything through online communities, experimentation, and basic tools. What began as curiosity quickly became a craft — discovering how pacing, sound, and structure could turn simple footage into an emotional experience.
             </p>
             <p>
-              My goal was simple: create an elite design and engineering studio that merges strategic intent with cutting-edge visual craft. By uniting brand strategy, Next.js web engineering, and custom AI integration, we empower ambitious founders to turn vision into scalable market leadership.
+              Over the years, that journey took me from editor to storyteller, content producer, and creative strategist. I’ve had the privilege of collaborating with creators, podcasts, agencies, ambitious founders, businesses, and international clients, exploring everything from human storytelling to modern AI-assisted production.
             </p>
             <p>
-              Every project we take on is backed by my personal commitment to quality, velocity, and clarity. Thank you for trusting us to shape your digital future.
+              I founded Big Toast Company on a simple principle: great content always starts with a great story. In a world full of rapid algorithms and visual noise, people don’t remember effects — they remember how a story made them feel and the message it left behind.
             </p>
-            <div className="pt-4 border-t border-zinc-800 flex items-center justify-between">
+            <p>
+              Whether we are editing short-form reels, producing deep-dive podcasts, or directing brand films, our focus is always on clarity, narrative intention, and craft. Thank you for being part of this journey.
+            </p>
+            <div className="pt-3.5 border-t border-zinc-800/80 flex items-center justify-between">
               <div>
-                <span className="font-bold text-white block text-lg">Marcus Leclerc</span>
-                <span className="text-xs text-zinc-400">Founder & CEO, BigToast</span>
+                <span className="font-bold text-white block text-base sm:text-lg">Himanshu Singh</span>
+                <span className="text-xs text-zinc-400">Founder &amp; Creative Director, Big Toast Company</span>
               </div>
-              <span className="font-serif italic text-2xl text-sky-300 font-normal">Marcus L.</span>
+              <span className="font-serif italic text-xl sm:text-2xl text-sky-300 font-normal">Himanshu S.</span>
             </div>
           </div>
         </div>
@@ -207,14 +302,14 @@ export default function AboutFounderPage() {
             Track Record
           </span>
           <h2 className="text-3xl md:text-5xl font-sans font-normal text-white mb-4">
-            Key <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">Milestones</span>
+            My Creative <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">Journey</span>
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {FOUNDER_MILESTONES.map((item, idx) => (
             <motion.div
-              key={item.year}
+              key={item.year + item.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -231,7 +326,15 @@ export default function AboutFounderPage() {
         </div>
       </section>
 
-      <CTABanner />
+      {/* Final Call-To-Action Section */}
+      <CTABanner
+        badge="LET'S BUILD SOMETHING GREAT"
+        headingPrefix="Have a Story "
+        headingHighlight="Worth Telling?"
+        description="Let's turn your ideas, footage, and conversations into stories people want to watch and remember. Start a conversation with Himanshu and the Big Toast team today."
+        buttonText="Start a Conversation"
+        buttonHref="/contact-us"
+      />
     </div>
   );
 }

@@ -48,7 +48,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-800/80 border border-zinc-600 text-xs md:text-sm font-medium tracking-wide text-zinc-200 shadow-md"
               >
                 <span className="w-2 h-2 rounded-full bg-zinc-300 animate-pulse" />
-                Intelligence. Creativity. Impact.
+                Storytelling. Content. Distribution.
               </motion.div>
 
               {/* Title */}
@@ -60,7 +60,7 @@ export default function Hero() {
               >
                 Transform the Way Your{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
-                  Story Looks
+                  Story Connects
                 </span>
               </motion.h1>
 
@@ -71,7 +71,7 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 className="text-lg md:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl"
               >
-                We craft cinematic reels, long-form videos, podcast edits, and AI-powered video content — paired with stunning websites, web apps, and mobile apps — so your brand stands out and converts everywhere.
+                We craft cinematic reels, podcast clips, long-form videos, and story-driven content — helping founders and brands turn their ideas into stories people watch, remember, and share.
               </motion.p>
 
               {/* Action Buttons */}

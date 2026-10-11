@@ -2,61 +2,110 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Compass, Code2, Sparkles, TrendingUp, ChevronDown } from "lucide-react";
 import TeamSection from "@/components/TeamSection";
 import CTABanner from "@/components/CTABanner";
 import PrimaryButton from "@/components/PrimaryButton";
 
 const VALUES = [
   {
-    title: "Cinematic Precision",
-    description: "Every cut, transition, and colour grade is intentional — crafted to evoke emotion and keep viewers watching till the final frame.",
+    title: "Creative Excellence",
+    description: "We focus on thoughtful storytelling, precise execution, and polished results that communicate your message clearly.",
   },
   {
-    title: "AI-Accelerated Production",
-    description: "We integrate AI video tools — Runway ML, HeyGen, ElevenLabs — to deliver broadcast-quality content at creator-friendly speed.",
+    title: "Smart Use of AI",
+    description: "We use AI-assisted workflows where they add value, helping streamline production while maintaining creative quality.",
   },
   {
-    title: "Platform-First Thinking",
-    description: "We don't just edit — we optimise for algorithm performance across Instagram, TikTok, YouTube, and beyond.",
+    title: "Client-First Thinking",
+    description: "We align every project with your goals, audience, and brand identity to create relevant digital experiences.",
   },
   {
-    title: "Fast Turnaround",
-    description: "Reels delivered in 2 - 4 days, long-form in 1 - 2 weeks. Our sprint-based workflow keeps you consistent without the wait.",
+    title: "Reliable Delivery",
+    description: "We value clear communication, organised workflows, and consistent progress throughout every project.",
+  },
+];
+
+const ABOUT_PILLARS = [
+  {
+    step: "01",
+    title: "Story-Driven Creative Direction",
+    category: "CONCEPT & STRATEGY",
+    description: "Every successful project starts with a clear idea. We shape concepts and narratives around your message, audience, and goals.",
+    icon: Compass,
+    image: "/images/pillar_creative_direction.jpg",
+  },
+  {
+    step: "02",
+    title: "Cinematic Editing & Post-Production",
+    category: "VIDEO PRODUCTION",
+    description: "Through precise editing, thoughtful pacing, colour grading, and sound design, we transform raw footage into engaging content.",
+    icon: Code2,
+    image: "/images/pillar_video_editing.jpg",
+  },
+  {
+    step: "03",
+    title: "AI-Powered Creative Workflows",
+    category: "AI-ASSISTED PRODUCTION",
+    description: "We use AI-assisted tools to support content creation, streamline repetitive tasks, and explore new creative possibilities.",
+    icon: Sparkles,
+    image: "/images/pillar_ai_workflow.jpg",
+  },
+  {
+    step: "04",
+    title: "Multi-Platform Content Experiences",
+    category: "DIGITAL DISTRIBUTION",
+    description: "We help adapt content and digital experiences to suit different platforms, audiences, and business objectives.",
+    icon: TrendingUp,
+    image: "/images/pillar_content_distribution.jpg",
   },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="pt-36 pb-20">
-      {/* Hero Banner */}
-      <section className="max-w-7xl mx-auto px-6 mb-24 text-center flex flex-col items-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-700 text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-6"
-        >
-          About BigToast
-        </motion.div>
+    <div className="pb-20">
+      {/* Hero Banner - 1 Screen Composition */}
+      <section className="relative min-h-[calc(100vh/0.9)] lg:h-[calc(100vh/0.9)] flex flex-col justify-between pt-24 pb-4 lg:pt-20 lg:pb-5 w-full overflow-hidden">
+        {/* Subtle Ambient Radial Glows */}
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-sky-500/10 blur-[140px] pointer-events-none" />
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-sans font-normal leading-tight text-white mb-8 max-w-4xl"
-        >
-          We Are a Premier Video Editing &amp; Media Production Studio Driven by{" "}
-          <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">Creativity &amp; Precision</span>
-        </motion.h1>
+        <div className="max-w-7xl mx-auto px-6 w-full flex-1 flex flex-col justify-center items-center text-center relative z-10 my-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-700 text-xs font-semibold uppercase tracking-wider text-zinc-300 mb-5"
+          >
+            ABOUT BIGTOAST
+          </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-paragraph text-lg md:text-xl max-w-3xl leading-relaxed mb-10"
-        >
-          Founded on the belief that great video is the most powerful brand asset of our time, BigToast combines cinematic editing, AI-powered production, and strategic content thinking to help brands and creators dominate digital platforms.
-        </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-sans font-normal leading-[1.12] text-white mb-6 max-w-4xl"
+          >
+            We Are a Creative Studio for Video, Digital Experiences{" "}
+            <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
+              &amp; Technology
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-zinc-300 text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed"
+          >
+            BigToast combines cinematic video editing, AI-assisted content production, and digital development to help brands and creators tell better stories and build stronger online experiences.
+          </motion.p>
+        </div>
+
+        {/* Subtle Scroll Hint */}
+        <div className="w-full flex items-center justify-center gap-2 text-zinc-500 text-xs py-1.5 pointer-events-none z-10">
+          <span>Scroll to explore story</span>
+          <ChevronDown className="w-3.5 h-3.5 animate-bounce text-sky-400" />
+        </div>
       </section>
 
       {/* Main Image Grid */}
@@ -64,18 +113,18 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7 relative aspect-[16/10] rounded-3xl overflow-hidden glass-card p-2">
             <Image
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
-              alt="BigToast Studio Environment"
+              src="/images/about_studio.jpg"
+              alt="BigToast Creative Studio & Video Production Team"
               fill
               className="object-cover rounded-2xl"
             />
           </div>
           <div className="md:col-span-5 flex flex-col gap-6">
             <h2 className="text-3xl font-bold text-white leading-tight">
-              Where Storytelling Meets Post-Production Excellence
+              Where Creative Ideas Meet Digital Execution
             </h2>
             <p className="text-paragraph text-base leading-relaxed">
-              Our team of editors, motion graphic artists, sound designers, and AI specialists collaborate to transform raw footage into scroll-stopping, share-worthy content — every single time.
+              We bring together creative storytelling, thoughtful editing, and modern technology to turn ideas into engaging content and digital experiences for brands, businesses, and creators.
             </p>
             <PrimaryButton text="Work With Us" href="/contact-us" />
           </div>
@@ -89,7 +138,7 @@ export default function AboutPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Core <span className="font-serif italic bg-gradient-to-r from-zinc-300 via-sky-300 to-cyan-400 bg-clip-text text-transparent">Values</span>
             </h2>
-            <p className="text-paragraph">The principles guiding every client project and frame we edit.</p>
+            <p className="text-paragraph">The principles that guide our creative process and every client project.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -104,8 +153,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <TeamSection />
-      <CTABanner />
+      {/* Four Pillars Section */}
+      <TeamSection
+        badge="OUR CREATIVE APPROACH"
+        headingPrefix="The Four Pillars of "
+        headingHighlight="Our Creative Process"
+        pillars={ABOUT_PILLARS}
+      />
+
+      {/* Final Call-To-Action Section */}
+      <CTABanner
+        badge="LET'S BUILD SOMETHING GREAT"
+        headingPrefix="Have an Idea "
+        headingHighlight="Worth Bringing to Life?"
+        description="Let's turn your ideas into engaging content and digital experiences. Tell us about your project and let's explore how we can work together."
+        buttonText="Start a Conversation"
+        buttonHref="/contact-us"
+      />
     </div>
   );
 }

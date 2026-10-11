@@ -74,7 +74,7 @@ const PROJECTS = [
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
     screens: [
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1200&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop",
+      "/images/project_founder_stories.jpg",
       "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?q=80&w=1200&auto=format&fit=crop",
     ],
   },
@@ -1211,7 +1211,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* ── Filter Tabs ────────────────────────────────────────────── */}
-      <section className="max-w-7xl mx-auto px-6 mb-12">
+      <section className="max-w-7xl mx-auto px-6 mb-5 sm:mb-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -1238,12 +1238,12 @@ export default function ProjectsPage() {
       <section className="max-w-7xl mx-auto px-6 mb-28">
         <AnimatePresence mode="popLayout">
           {activeCategory === "all" ? (
-            <motion.div key="all" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-20">
-              {CATEGORIES.filter((cat) => cat.id !== "all").map((cat) => {
+            <motion.div key="all" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-16">
+              {CATEGORIES.filter((cat) => cat.id !== "all").map((cat, catIdx) => {
                 return (
-                  <div key={cat.id} className="pt-6">
+                  <div key={cat.id} className={catIdx === 0 ? "pt-0" : "pt-6"}>
                     {/* Section Header */}
-                    <div className="flex items-center gap-3 mb-8">
+                    <div className="flex items-center gap-3 mb-6">
                       <div className="w-1 h-7 rounded-full bg-gradient-to-b from-sky-400 to-cyan-500" />
                       <h3 className="text-2xl font-bold text-white">{cat.label}</h3>
                     </div>

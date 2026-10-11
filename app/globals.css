@@ -26,6 +26,7 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  zoom: 0.9;
 }
 
 /* Touch Action & Tap Optimization */
@@ -156,4 +157,13 @@ html.lenis, html.lenis body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #71717a;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
