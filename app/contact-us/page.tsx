@@ -402,13 +402,16 @@ export default function ContactPage() {
               >
                 Go to Form <ArrowDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
               </button>
-              <span className="text-[10px] text-zinc-500 font-mono">Section 2</span>
+              <span className="text-[10px] text-zinc-500 font-mono">Inquiry Form</span>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── SECTION 2: DEDICATED INQUIRY FORM SECTION (FITS 1 SCREEN) ── */}
+      {/* ── FREQUENTLY ASKED QUESTIONS ── */}
+      <FAQSection />
+
+      {/* ── DEDICATED INQUIRY FORM SECTION (AT BOTTOM) ── */}
       <section id="inquiry-form" className="min-h-screen flex flex-col justify-center max-w-7xl mx-auto px-6 pt-20 pb-10 border-t border-zinc-800/80 scroll-mt-6">
         {/* Section 2 Header */}
         <div className="text-center flex flex-col items-center mb-5 md:mb-6">
@@ -576,8 +579,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <FAQSection />
     </div>
   );
 }

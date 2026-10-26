@@ -2,12 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { ArrowUpRight, Instagram, Linkedin, Mail } from "lucide-react";
 
 const FOOTER_NAV = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about-us" },
-  { name: "About Founder", href: "/about-founder" },
   { name: "Services", href: "/service" },
   { name: "Projects", href: "/project" },
   { name: "Blogs", href: "/blog" },
@@ -41,7 +40,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-zinc-400 text-xs md:text-sm max-w-sm leading-relaxed">
-              Big Toast Company helps founders, creators, and brands turn ideas into stories people want to watch, remember, and share.
+              Big Toast Company helps founders, creators, and brands build distribution and visibility through content — turning ideas into stories people want to watch, remember, and share.
             </p>
           </div>
 
@@ -92,40 +91,41 @@ export default function Footer() {
 
         {/* Copyright Bar & Social Icons */}
         <div className="py-4 flex flex-col sm:flex-row items-center justify-between text-[11px] md:text-xs text-zinc-400 gap-4 border-b border-zinc-800/80">
-          <div className="flex flex-col gap-0.5 text-center sm:text-left">
+          <div className="text-center sm:text-left">
             <span>© 2026 Big Toast Company. All rights reserved.</span>
-            <span>Designed & Developed by Bhawartha Lolage</span>
           </div>
 
           {/* Social Icons */}
           <div className="flex items-center gap-2">
             <a
-              href="#"
-              aria-label="Facebook"
-              className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-zinc-800 transition-all"
-            >
-              <Facebook className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="#"
-              aria-label="Twitter"
-              className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-zinc-800 transition-all"
-            >
-              <Twitter className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="#"
+              href="https://www.instagram.com/bigtoastcompany/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
-              className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-zinc-800 transition-all"
+              title="Instagram"
+              className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-zinc-800 transition-all hover:scale-105"
             >
               <Instagram className="w-3.5 h-3.5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/himanshuworkshere/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-zinc-800 transition-all"
+              title="LinkedIn"
+              className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-zinc-800 transition-all hover:scale-105"
             >
               <Linkedin className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="mailto:himanshuworkshere1@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Email"
+              title="Direct Email (Gmail)"
+              className="w-8 h-8 rounded-full bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-300 hover:text-white hover:border-zinc-600 hover:bg-zinc-800 transition-all hover:scale-105"
+            >
+              <Mail className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>

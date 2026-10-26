@@ -1489,7 +1489,7 @@ export default function ProjectsPage() {
             className="mt-14 glass-card-charcoal rounded-3xl p-8 border border-zinc-700/60 flex flex-col md:flex-row items-center justify-between gap-6"
           >
             <div>
-              <p className="text-white font-bold text-xl mb-1">Want a full-service content package like Yanisa?</p>
+              <p className="text-white font-bold text-xl mb-1">Want to build distribution and visibility through content?</p>
               <p className="text-zinc-400 text-sm">We handle your entire content ecosystem — reels, films, websites, and apps — under one creative team.</p>
             </div>
             <PrimaryButton text="Start a Partnership" href="/contact-us" showArrow={true} />

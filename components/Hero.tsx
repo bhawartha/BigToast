@@ -71,7 +71,7 @@ export default function Hero() {
                 transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 className="text-lg md:text-xl text-zinc-300 font-normal leading-relaxed max-w-2xl"
               >
-                We craft cinematic reels, podcast clips, long-form videos, and story-driven content — helping founders and brands turn their ideas into stories people watch, remember, and share.
+                We craft cinematic reels, podcast clips, long-form videos, and story-driven content — helping founders, creators, and brands build distribution and visibility through content people watch, remember, and share.
               </motion.p>
 
               {/* Action Buttons */}
@@ -85,8 +85,10 @@ export default function Hero() {
 
                 {/* Showreel Modal Trigger */}
                 <button
+                  type="button"
+                  id="view-showreel-btn"
                   onClick={() => setShowreelOpen(true)}
-                  className="flex items-center gap-3 px-6 py-3.5 rounded-full bg-zinc-800/80 hover:bg-zinc-700 border border-zinc-600 text-white font-medium text-[16px] transition-all duration-300 group shadow-md"
+                  className="flex items-center gap-3 px-6 py-3.5 rounded-full bg-zinc-800/80 hover:bg-zinc-700 border border-zinc-600 text-white font-medium text-[16px] transition-all duration-300 group shadow-md cursor-pointer"
                 >
                   <div className="w-7 h-7 rounded-full bg-zinc-700 border border-zinc-500 flex items-center justify-center text-zinc-200 group-hover:scale-110 group-hover:bg-zinc-600 group-hover:text-white transition-all">
                     <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
@@ -159,7 +161,7 @@ export default function Hero() {
       <VideoModal
         isOpen={showreelOpen}
         onClose={() => setShowreelOpen(false)}
-        videoUrl="https://www.youtube.com/embed/E5WGzdnR2Gw"
+        videoUrl="/launch 4k.mov"
       />
     </>
   );

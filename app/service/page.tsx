@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import ServicesSection from "@/components/ServicesSection";
-import FAQSection from "@/components/FAQSection";
+import PricingSection from "@/components/PricingSection";
 import CTABanner from "@/components/CTABanner";
 
 export default function ServicesPage() {
@@ -40,7 +40,7 @@ export default function ServicesPage() {
       </section>
 
       <ServicesSection singleColumn={true} hideHeader={true} />
-      <FAQSection />
+      <PricingSection />
       <CTABanner />
     </div>
   );

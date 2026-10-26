@@ -7,33 +7,37 @@ import { Compass, Code2, Sparkles, TrendingUp } from "lucide-react";
 const STRATEGY_PILLARS = [
   {
     step: "01",
-    title: "Story-Driven Creative Direction",
-    category: "Concept & Strategy",
-    description: "Every great story starts with a strong idea. We find compelling narratives and shape concepts that connect with your audience.",
+    title: "Finding the Story Within",
+    category: "EXTRACTION",
+    description:
+      "We uncover your experiences, expertise, ideas, and beliefs to find the stories that make your perspective unique.",
     icon: Compass,
     image: "/images/pillar_creative_direction.jpg",
   },
   {
     step: "02",
-    title: "Cinematic Editing & Post-Production",
-    category: "Editing & Colour",
-    description: "Through thoughtful pacing, precise cuts, colour grading, and sound design, we turn raw footage into compelling stories.",
+    title: "Defining What You Stand For",
+    category: "POSITIONING",
+    description:
+      "We clarify what you should be known for, who you want to reach, and what makes your voice different.",
     icon: Code2,
     image: "/images/pillar_video_editing.jpg",
   },
   {
     step: "03",
-    title: "AI-Assisted Creative Production",
-    category: "AI-Assisted Production",
-    description: "We use AI-assisted creative workflows where they add value, supporting content production without losing the human story.",
+    title: "Turning Ideas Into Stories",
+    category: "STORYTELLING",
+    description:
+      "We transform your insights into compelling narratives, content concepts, hooks, and scripts that connect with your audience.",
     icon: Sparkles,
     image: "/images/pillar_ai_workflow.jpg",
   },
   {
     step: "04",
-    title: "Multi-Platform Content Distribution",
-    category: "Content Distribution",
-    description: "We adapt content for the platforms where audiences watch, helping stories reach people in the formats they prefer.",
+    title: "Bringing Your Stories to Life",
+    category: "CONTENT CREATION",
+    description:
+      "We turn strategy and storytelling into engaging videos and creative assets, ready for you to publish across your platforms and build a recognizable, trusted brand.",
     icon: TrendingUp,
     image: "/images/pillar_content_distribution.jpg",
   },
@@ -56,9 +60,9 @@ interface TeamSectionProps {
 }
 
 export default function TeamSection({
-  badge = "Our Success Strategy",
+  badge = "OUR CREATIVE APPROACH",
   headingPrefix = "The Four Pillars of ",
-  headingHighlight = "Storytelling",
+  headingHighlight = "Our Creative Process",
   pillars = STRATEGY_PILLARS,
 }: TeamSectionProps = {}) {
   return (
@@ -130,7 +134,7 @@ export default function TeamSection({
                   <h3 className="text-base lg:text-lg font-bold text-white group-hover:text-zinc-100 transition-colors mb-1.5 leading-snug line-clamp-2">
                     {pillar.title}
                   </h3>
-                  <p className="text-zinc-400 text-xs leading-relaxed line-clamp-3">
+                  <p className="text-zinc-400 text-xs leading-relaxed line-clamp-4">
                     {pillar.description}
                   </p>
                 </div>
